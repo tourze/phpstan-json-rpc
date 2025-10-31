@@ -1,0 +1,14 @@
+services:
+    # JsonRPC
+    -
+        class: Tourze\PHPStanJsonRPC\Rules\ProcedureTestMustInheritAbstractTestCaseRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanJsonRPC\Rules\ProcedureMustHaveRequiredAttributesRule
+        tags:
+            - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanJsonRPC\Rules\MethodExposeNameRule
+        tags:
+            - phpstan.rules.rule

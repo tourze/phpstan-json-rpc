@@ -1,0 +1,9 @@
+parameters:
+    level: 8
+    paths:
+        - .
+    bootstrapFiles:
+        - ../../../vendor/autoload.php
+
+rules:
+    - Tourze\PHPStanJsonRPC\Rules\ProcedureTestMustInheritAbstractTestCaseRule

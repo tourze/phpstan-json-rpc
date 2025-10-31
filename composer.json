@@ -1,0 +1,31 @@
+{
+  "name": "tourze/phpstan-json-rpc",
+  "description": "",
+  "type": "library",
+  "homepage": "https://github.com/tourze/phpstan-json-rpc",
+  "license": "MIT",
+  "require": {
+    "composer-runtime-api": "^2.0",
+    "tourze/enum-extra": "0.1.*",
+    "tourze/json-rpc-core": "0.0.*",
+    "tourze/phpunit-enum": "0.0.*"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^11.5",
+    "tourze/phpunit-base": "1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tourze\\PHPStanJsonRPC\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tourze\\PHPStanJsonRPC\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "release-version": "0.1.*"
+  }
+}
