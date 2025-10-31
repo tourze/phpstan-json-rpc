@@ -7,7 +7,7 @@
   "require": {
     "composer-runtime-api": "^2.0",
     "tourze/enum-extra": "1.*",
-    "tourze/json-rpc-core": "0.0.*",
+    "tourze/json-rpc-core": "1.0.*",
     "tourze/phpunit-enum": "1.*"
   },
   "require-dev": {
