@@ -13,12 +13,15 @@ use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
 use Tourze\JsonRPC\Core\Result\ArrayResult;
 
 #[MethodTag(name: 'test')]
-#[MethodDoc(summary: 'Test Procedure', description: 'A valid test procedure')]
-#[MethodExpose(method: 'test.valid')]
-class ValidProcedure extends BaseProcedure
+#[MethodDoc(summary: 'Test Procedure')]
+#[MethodExpose(method: 'test.fullyQualified')]
+class ProcedureWithFullyQualifiedPhpstanParam extends BaseProcedure
 {
-    public function execute(RpcParamInterface $param): RpcResultInterface
+    /**
+     * @phpstan-param \Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\TestParam $param
+     */
+    public function execute(TestParam|RpcParamInterface $param): RpcResultInterface
     {
-        return new ArrayResult(['result' => 'test']);
+        return new ArrayResult(['name' => $param->name]);
     }
 }

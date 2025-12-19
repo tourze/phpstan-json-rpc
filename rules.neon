@@ -12,3 +12,7 @@ services:
         class: Tourze\PHPStanJsonRPC\Rules\MethodExposeNameRule
         tags:
             - phpstan.rules.rule
+    -
+        class: Tourze\PHPStanJsonRPC\Rules\ProcedureExecutePhpstanParamRule
+        tags:
+            - phpstan.rules.rule

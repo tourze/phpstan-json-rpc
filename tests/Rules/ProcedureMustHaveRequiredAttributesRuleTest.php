@@ -7,6 +7,7 @@ namespace Tourze\PHPStanJsonRPC\Tests\Rules;
 use PHPStan\Rules\Rule;
 use PHPStan\Testing\RuleTestCase;
 use PHPUnit\Framework\Attributes\CoversNothing;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tourze\JsonRPC\Core\Attribute\MethodDoc;
 use Tourze\JsonRPC\Core\Attribute\MethodExpose;
 use Tourze\JsonRPC\Core\Attribute\MethodTag;
@@ -49,7 +50,7 @@ final class ProcedureMustHaveRequiredAttributesRuleTest extends RuleTestCase
         $this->analyse([__DIR__ . '/Fixtures/MissingMethodTagProcedure.php'], [
             [
                 'Class Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\MissingMethodTagProcedure must have the following attributes: Tourze\JsonRPC\Core\Attribute\MethodTag.',
-                11,
+                14,
             ],
         ]);
     }
@@ -59,7 +60,7 @@ final class ProcedureMustHaveRequiredAttributesRuleTest extends RuleTestCase
         $this->analyse([__DIR__ . '/Fixtures/MissingMethodDocProcedure.php'], [
             [
                 'Class Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\MissingMethodDocProcedure must have the following attributes: Tourze\JsonRPC\Core\Attribute\MethodDoc.',
-                11,
+                14,
             ],
         ]);
     }
@@ -69,7 +70,7 @@ final class ProcedureMustHaveRequiredAttributesRuleTest extends RuleTestCase
         $this->analyse([__DIR__ . '/Fixtures/MissingMethodExposeProcedure.php'], [
             [
                 'Class Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\MissingMethodExposeProcedure must have the following attributes: Tourze\JsonRPC\Core\Attribute\MethodExpose.',
-                11,
+                14,
             ],
         ]);
     }
@@ -79,7 +80,7 @@ final class ProcedureMustHaveRequiredAttributesRuleTest extends RuleTestCase
         $this->analyse([__DIR__ . '/Fixtures/MissingMultipleAttributesProcedure.php'], [
             [
                 'Class Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\MissingMultipleAttributesProcedure must have the following attributes: Tourze\JsonRPC\Core\Attribute\MethodTag, Tourze\JsonRPC\Core\Attribute\MethodDoc.',
-                11,
+                14,
             ],
         ]);
     }
@@ -110,7 +111,7 @@ final class ProcedureMustHaveRequiredAttributesRuleTest extends RuleTestCase
             [
                 [
                     'Class Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\MissingMethodTagProcedure must have the following attributes: Tourze\JsonRPC\Core\Attribute\MethodTag.',
-                    11,
+                    14,
                 ],
             ],
         ];
@@ -120,7 +121,7 @@ final class ProcedureMustHaveRequiredAttributesRuleTest extends RuleTestCase
             [
                 [
                     'Class Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\MissingMethodDocProcedure must have the following attributes: Tourze\JsonRPC\Core\Attribute\MethodDoc.',
-                    11,
+                    14,
                 ],
             ],
         ];
@@ -130,7 +131,7 @@ final class ProcedureMustHaveRequiredAttributesRuleTest extends RuleTestCase
             [
                 [
                     'Class Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\MissingMethodExposeProcedure must have the following attributes: Tourze\JsonRPC\Core\Attribute\MethodExpose.',
-                    11,
+                    14,
                 ],
             ],
         ];
@@ -140,7 +141,7 @@ final class ProcedureMustHaveRequiredAttributesRuleTest extends RuleTestCase
             [
                 [
                     'Class Tourze\PHPStanJsonRPC\Tests\Rules\Fixtures\MissingMultipleAttributesProcedure must have the following attributes: Tourze\JsonRPC\Core\Attribute\MethodTag, Tourze\JsonRPC\Core\Attribute\MethodDoc.',
-                    11,
+                    14,
                 ],
             ],
         ];

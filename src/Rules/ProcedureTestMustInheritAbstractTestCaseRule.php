@@ -13,8 +13,8 @@ use PHPStan\Rules\Rule;
 use PHPStan\Rules\RuleErrorBuilder;
 use PHPStan\Type\ObjectType;
 use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
-use Tourze\JsonRPC\Core\Tests\AbstractProcedureTestCase;
 use Tourze\PHPUnitBase\TestCaseHelper;
+use Tourze\PHPUnitJsonRPC\AbstractProcedureTestCase;
 
 /**
  * 检查继承 BaseProcedure 的类的测试用例必须直接继承 AbstractProcedureTestCase

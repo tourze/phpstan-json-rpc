@@ -10,8 +10,6 @@ use PHPStan\Testing\RuleTestCase;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
-use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
-use Tourze\JsonRPC\Core\Tests\AbstractProcedureTestCase;
 use Tourze\PHPStanJsonRPC\Rules\ProcedureTestMustInheritAbstractTestCaseRule;
 
 /**
@@ -65,9 +63,7 @@ final class ProcedureTestMustInheritAbstractTestCaseRuleTest extends RuleTestCas
                 'code' => '<?php
 namespace Test;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
-use Tourze\JsonRPC\Core\Tests\AbstractProcedureTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;use Tourze\JsonRPC\Core\Procedure\BaseProcedure;use Tourze\PHPUnitJsonRPC\AbstractProcedureTestCase;
 
 class SampleProcedure extends BaseProcedure {}
 
@@ -102,9 +98,7 @@ class InvalidProcedureTest extends TestCase {}',
                 'code' => '<?php
 namespace Test;
 
-use PHPUnit\Framework\TestCase;
-use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
-use Tourze\JsonRPC\Core\Tests\AbstractProcedureTestCase;
+use PHPUnit\Framework\TestCase;use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
 
 class SampleProcedure extends BaseProcedure {}
 
@@ -117,9 +111,7 @@ class TestWithoutCoversClass extends TestCase {}',
                 'code' => '<?php
 namespace Test;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
-use Tourze\JsonRPC\Core\Tests\AbstractProcedureTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;use Tourze\PHPUnitJsonRPC\AbstractProcedureTestCase;
 
 class RegularClass {}
 
@@ -148,9 +140,7 @@ class RegularClassWithCoversClass {}',
                 'code' => '<?php
 namespace Test;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
-use Tourze\JsonRPC\Core\Tests\AbstractProcedureTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;use Tourze\JsonRPC\Core\Procedure\BaseProcedure;use Tourze\PHPUnitJsonRPC\AbstractProcedureTestCase;
 
 class SampleProcedure extends BaseProcedure {}
 
@@ -171,10 +161,7 @@ class IndirectInheritanceTest extends IntermediateTestCase {}',
                 'code' => '<?php
 namespace Test;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
-use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
-use Tourze\JsonRPC\Core\Tests\AbstractProcedureTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;use PHPUnit\Framework\TestCase;use Tourze\JsonRPC\Core\Procedure\BaseProcedure;use Tourze\PHPUnitJsonRPC\AbstractProcedureTestCase;
 
 class SampleProcedure extends BaseProcedure {}
 class AnotherProcedure extends BaseProcedure {}
@@ -357,9 +344,7 @@ class ComplexNamedProcedureTest extends TestCase {}';
         return $this->createTempFile('<?php
 namespace Test;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-use Tourze\JsonRPC\Core\Procedure\BaseProcedure;
-use Tourze\JsonRPC\Core\Tests\AbstractProcedureTestCase;
+use PHPUnit\Framework\Attributes\CoversClass;use Tourze\JsonRPC\Core\Procedure\BaseProcedure;use Tourze\PHPUnitJsonRPC\AbstractProcedureTestCase;
 
 class SampleProcedure extends BaseProcedure {}
 
